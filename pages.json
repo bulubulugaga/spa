@@ -1,0 +1,297 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "进入页面",
+				"navigationStyle": "custom"   //引导页隐藏导航
+			}
+		}, {
+			"path": "pages/index/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationStyle": "custom",  //引导页隐藏导航
+				"usingComponents": {
+				  "van-radio": "/wxcomponents/vant/dist/radio/index",
+				  "van-radio-group": "/wxcomponents/vant/dist/radio-group/index",
+				  "van-picker": "/wxcomponents/vant/dist/picker/index"			
+				}
+			}
+		}, {
+			"path": "pages/index/chooseAvar/chooseAvar",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}, {
+			"path": "pages/tabBar/switch/switch",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"usingComponents": {
+				  "van-tabbar": "/wxcomponents/vant/dist/tabbar/index",
+				  "van-tabbar-item": "/wxcomponents/vant/dist/tabbar-item/index",
+				  "van-notice-bar": "/wxcomponents/vant/dist/notice-bar/index"
+				}
+			}
+		} 
+    ],
+	"subPackages": [  //分包处理
+		{
+			"root": "pages/home",
+			"pages": [
+				{
+					"path" : "chooseAd/chooseAd",
+					"style" : {
+						"navigationBarTitleText": "选择城市"
+					}
+				}
+			]
+		}, {
+			"root": "pages/category",
+			"pages": [
+				{
+					"path" : "placeOrder/placeOrder",
+					"style" : {
+						"navigationBarTitleText": "预约下单",
+						"usingComponents":{
+							"van-stepper":"/wxcomponents/vant/dist/stepper/index"
+						}
+					}
+				}, {
+					"path" : "serveDetail/serveDetail",
+					"style" : {
+						"navigationBarTitleText": "服务详情",
+						"usingComponents": {
+						  "van-cell": "/wxcomponents/vant/dist/cell/index",
+						  "van-cell-group": "/wxcomponents/vant/dist/cell-group/index",
+						  "van-grid": "/wxcomponents/vant/dist/grid/index",
+						  "van-grid-item": "/wxcomponents/vant/dist/grid-item/index"				
+						}
+					}
+				}, {
+					"path" : "serveDetail/mechList/mechList",
+					"style" : {
+						"navigationBarTitleText": "技师列表"
+					}
+				}, {
+					"path" : "mechDetail/mechDetail",
+					"style" : {
+						"navigationBarTitleText": "技师详情",
+						"usingComponents": {
+						  "van-cell": "/wxcomponents/vant/dist/cell/index",
+						  "van-stepper":"/wxcomponents/vant/dist/stepper/index"
+						}
+					}
+				}, {
+					"path" : "search/search",
+					"style" : {
+						"navigationBarTitleText": "搜索",
+						"usingComponents": {
+						  "van-cell": "/wxcomponents/vant/dist/cell/index",
+						  "van-stepper":"/wxcomponents/vant/dist/stepper/index"
+						}
+					}
+				}
+			]
+		}, {
+			"root": "pages/bill",
+			"pages": [
+				{
+					"path" : "comment/comment",
+					"style" : {
+						"navigationBarTitleText": "评价",
+						"usingComponents": {
+						  "van-checkbox": "/wxcomponents/vant/dist/checkbox/index"
+						}
+					}
+				}, {
+					"path" : "detail/detail",
+					"style" : {
+						"navigationBarTitleText": "订单详情"
+					}
+				}, {
+					"path" : "detailT/detailT",
+					"style" : {
+						"navigationBarTitleText": "订单详情",
+						"usingComponents": {
+						   "van-count-down": "/wxcomponents/vant/dist/count-down/index"
+						}
+					}
+				}
+			]
+		}, {
+			"root": "pages/user",
+			"pages": [
+				{
+					"path" : "login/login",
+					"style" : {
+						"navigationBarTitleText": "登录"
+					}
+				}, {
+					"path" : "msg/msg",
+					"style" : {
+						"navigationBarTitleText": "消息"
+					}
+				}, {
+					"path" : "msgDetail/msgDetail",
+					"style" : {
+						"navigationBarTitleText": "消息详情"
+					}
+				}, {
+					"path" : "issue/issue",
+					"style" : {
+						"navigationBarTitleText": "常见问题",
+						"usingComponents": {
+						    "van-collapse": "/wxcomponents/vant/dist/collapse/index",
+							"van-collapse-item": "/wxcomponents/vant/dist/collapse-item/index"
+						}
+					}
+				}, {
+					"path" : "aboutUS/aboutUS",
+					"style" : {
+						"navigationBarTitleText": "关于我们",
+						"usingComponents": {
+						  "van-cell": "/wxcomponents/vant/dist/cell/index"
+						}
+					}
+				}, {
+					"path" : "idea/idea",
+					"style" : {
+						"navigationBarTitleText": "意见反馈"
+					}
+				}, {
+					"path" : "idea/list/list",
+					"style" : {
+						"navigationBarTitleText": "反馈记录"
+					}
+				}, {
+					"path" : "idea/detail/detail",
+					"style" : {
+						"navigationBarTitleText": "反馈详情"
+					}
+				}, {
+					"path" : "agreement/agreement",
+					"style" : {
+						"navigationBarTitleText": "用户协议"
+					}
+				}, {
+					"path" : "statement/statement",
+					"style" : {
+						"navigationBarTitleText": "平台声明"
+					}
+				}, {
+					"path" : "address/address",
+					"style" : {
+						"navigationBarTitleText": "我的地址"
+					}
+				}, {
+					"path" : "address/edit/edit",
+					"style" : {
+						"navigationBarTitleText": "编辑地址",
+						"usingComponents": {
+						  "van-cell": "/wxcomponents/vant/dist/cell/index"
+						}
+					}
+				}, {
+					"path" : "invite/invite",
+					"style" : {
+						"navigationBarTitleText": "邀请有奖"
+					}
+				}, {
+					"path" : "coupon/coupon",
+					"style" : {
+						"navigationBarTitleText": "现金卡"
+					}
+				}, {
+					"path" : "collection/collection",
+					"style" : {
+						"navigationBarTitleText": "收藏"
+					}
+				}, {
+					"path" : "settled/settled",
+					"style" : {
+						"navigationBarTitleText": "商城入驻",
+						"usingComponents": {
+						  "van-divider": "/wxcomponents/vant/dist/divider/index"
+						}
+					}
+				}, {
+					"path" : "wallet/wallet",
+					"style" : {
+						"navigationBarTitleText": "钱包",
+						"usingComponents": {
+						  "van-cell": "/wxcomponents/vant/dist/cell/index"
+						}
+					}
+				}, {
+					"path" : "wallet/recharge/recharge",
+					"style" : {
+						"navigationBarTitleText": "钱包充值"
+					}
+				}, {
+					"path" : "wallet/withdrawal/withdrawal",
+					"style" : {
+						"navigationBarTitleText": "钱包提现"
+					}
+				}, {
+					"path" : "wallet/detail/detail",
+					"style" : {
+						"navigationBarTitleText": "钱包明细",
+						"usingComponents": {
+						  "van-datetime-picker": "/wxcomponents/vant/dist/datetime-picker/index"			
+						},
+						"onReachBottomDistance": 50
+					}
+				}, {
+					"path" : "law/law",
+					"style" : {
+						"navigationBarTitleText": "法律声明"
+					}
+				}, {
+					"path" : "setting/setting",
+					"style" : {
+						"navigationBarTitleText": "设置"
+					}
+				}, {
+					"path" : "setting/changeInfo/changeInfo",
+					"style" : {
+						"navigationBarTitleText": "修改信息",
+						"usingComponents": {
+						  "van-radio": "/wxcomponents/vant/dist/radio/index",
+						  "van-radio-group": "/wxcomponents/vant/dist/radio-group/index",
+						  "van-picker": "/wxcomponents/vant/dist/picker/index",
+						  "van-dropdown-menu": "/wxcomponents/vant/dist/dropdown-menu/index",
+						  "van-dropdown-item": "/wxcomponents/vant/dist/dropdown-item/index"
+						}
+					}
+				}, {
+					"path" : "setting/changePass/changePass",
+					"style" : {
+						"navigationBarTitleText": "修改密码"
+					}
+				}, {
+					"path" : "setting/changePhone/changePhone",
+					"style" : {
+						"navigationBarTitleText": "修改手机号"
+					}
+				}
+			]
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#ffffff",
+		"backgroundColor": "#F8F8F8",
+		// "enablePullDownRefresh": true  //开启下拉刷新
+		"usingComponents": {
+		  "van-tab": "/wxcomponents/vant/dist/tab/index",
+		  "van-tabs": "/wxcomponents/vant/dist/tabs/index",
+		  "van-rate": "/wxcomponents/vant/dist/rate/index",
+		  "van-icon": "/wxcomponents/vant/dist/icon/index",
+		  "van-uploader": "/wxcomponents/vant/dist/uploader/index",
+		  "van-popup": "/wxcomponents/vant/dist/popup/index",
+		  "van-swipe-cell": "/wxcomponents/vant/dist/swipe-cell/index",
+		   "van-checkbox": "/wxcomponents/vant/dist/checkbox/index"
+		}
+	}
+}
